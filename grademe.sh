@@ -4,7 +4,8 @@ echo ""
 
 cd ../
 echo "make fclean && make bonus...."
-make fclean && make bonus > /dev/null
+make fclean > /dev/null
+make bonus > /dev/null
 
 echo "making directorys for review..."
 rm -rf tmp
