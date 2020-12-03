@@ -1,6 +1,6 @@
 # ft_mini_ls_test
 
-This is a testing tool for ft_mini_ls.
+This is a tester for ft_mini_ls.
 
 Note that this is a **"bonus"** tester !!! 
 
