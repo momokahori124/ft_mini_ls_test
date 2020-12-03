@@ -11,9 +11,20 @@ ft_mini_lsのテストツールです。
 ```
 $ cd ft_mini_ls
 ```
+```
+$ git clone https://github.com/momokahori124/ft_mini_ls_test.git && cd ft_mini_ls_test
+```
+
+### mandatory
 
 ```
-$ git clone https://github.com/momokahori124/ft_mini_ls_test.git && cd ft_mini_ls_test && bash grademe.sh
+$ bash grademe.sh
+```
+
+### bonus
+
+```
+$ bash bonus_grademe.sh
 ```
 
 
