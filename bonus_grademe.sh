@@ -35,13 +35,13 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-bash option.sh -U
+bash option.sh -u
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
 TEST=$(( TEST + 1 ))
 
-bash option.sh -u
+bash option.sh -U
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
@@ -84,7 +84,7 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-bash option.sh -au
+bash option.sh -aU
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
@@ -138,7 +138,7 @@ TEST=$(( TEST + 1 ))
 # fi
 # TEST=$(( TEST + 1 ))
 
-bash option.sh -sR
+bash option.sh -uR
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
