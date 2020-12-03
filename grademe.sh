@@ -3,8 +3,8 @@ echo "test starting....❤️"
 echo ""
 
 cd ../
-echo "make re...."
-make re > /dev/null
+echo "make fclean && make bonus...."
+make fclean && make bonus > /dev/null
 
 echo "making directorys for review..."
 rm -rf tmp
@@ -70,12 +70,6 @@ if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
 TEST=$(( TEST + 1 ))
-
-# bash option.sh -G
-# if test $? -eq 1; then
-#     COUNT=$(( COUNT + 1 ))
-# fi
-# TEST=$(( TEST + 1 ))
 
 bash option.sh -R
 if test $? -eq 1; then
@@ -283,7 +277,7 @@ echo ""
 echo "You want to check result, try \"bash result.sh [option]\" "
 echo ""
 
-# cd ../
-# rm -rf tmp
-# cd ../
-# rm -rf test_minishell_momoka
+cd ../
+rm -rf tmp
+cd ../
+rm -rf test_minishell_momoka
