@@ -1,12 +1,8 @@
 # ft_mini_ls_test
 
-ft_mini_lsのテストツールです。
-
-<img width="277" alt="スクリーンショット 2020-12-03 19 14 42" src="https://user-images.githubusercontent.com/60100351/101001990-316b7780-35a3-11eb-9ab8-2f45729f7ba3.png">
+This is a testing tool for ft_mini_ls.
 
 # usage
-
-自分の課題がやってあるディレクトリの中に入ります。
 
 ```
 $ cd ft_mini_ls
@@ -26,5 +22,12 @@ $ bash grademe.sh
 ```
 $ bash bonus_grademe.sh
 ```
+
+<img width="452" alt="スクリーンショット 2020-12-04 2 37 52" src="https://user-images.githubusercontent.com/60100351/101066546-e6b92200-35d9-11eb-99ab-5e174c864174.png">
+
+You can see a diff of the output results.
+
+<img width="507" alt="スクリーンショット 2020-12-04 2 38 30" src="https://user-images.githubusercontent.com/60100351/101066549-e751b880-35d9-11eb-943d-57ab66f95a7d.png">
+
 
 
