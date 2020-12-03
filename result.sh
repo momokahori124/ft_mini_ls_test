@@ -1,6 +1,8 @@
+echo "wait...."
+
 cd ../
 make re > /dev/null
-sleep 5
+sleep 3
 cd ../
 # あとであなたのパソコンのディレクトリを間違って消さないように変な名前のディレクトリにしています
 mkdir test_minishell_momoka
@@ -25,4 +27,4 @@ fi
 
 echo  ""
 
-rm -rf test_minishell_momoka
+# rm -rf test_minishell_momoka

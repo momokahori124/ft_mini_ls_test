@@ -5,6 +5,9 @@ echo ""
 cd ../
 echo "make re...."
 make re > /dev/null
+
+echo "making directorys for review..."
+rm -rf tmp
 mkdir tmp
 mkdir tmp/dir1 tmp/dir2 tmp/dir3
 sleep 1
@@ -12,11 +15,15 @@ touch tmp/file1 tmp/file2 tmp/dir1/file3
 sleep 1
 touch tmp/dir1/file4 tmp/dir1/file5
 
+echo "making directory for diff..."
+
 cd ../
 # あとであなたのパソコンのディレクトリを間違って消さないように変な名前のディレクトリにしています
+rm -rf test_minishell_momoka
 mkdir test_minishell_momoka
 
 cd ft_mini_ls/ft_mini_ls_test
+echo ""
 
 sleep 1
 
@@ -27,6 +34,7 @@ echo ""
 
 COUNT=0
 TEST=0
+
 bash option.sh ""
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
@@ -244,9 +252,29 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
+bash option.sh -au -U
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
 
+bash option.sh -U -ua
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
 
+bash option.sh -Uuuuuu -uuuU
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
 
+bash option.sh -Uuuuuu -uu
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
 
 echo ""
 echo "success : ${COUNT}/${TEST}"
@@ -255,7 +283,7 @@ echo ""
 echo "You want to check result, try \"bash result.sh [option]\" "
 echo ""
 
-cd ../
-rm -rf tmp
-cd ../
-rm -rf test_minishell_momoka
+# cd ../
+# rm -rf tmp
+# cd ../
+# rm -rf test_minishell_momoka
