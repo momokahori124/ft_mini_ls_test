@@ -2,6 +2,8 @@
 
 This is a testing tool for ft_mini_ls.
 
+Note that this is a "bonus" tester !!! 
+
 # usage
 
 ```
