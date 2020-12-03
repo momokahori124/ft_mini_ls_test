@@ -232,30 +232,18 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-
-echo ""
-echo -e "\033[35m----------------------------\033[m"
-echo -e "       \033[35mCorner Case\033[m"
-echo -e "\033[35m----------------------------\033[m"
-echo ""
-
 bash option.sh -a -R
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
 TEST=$(( TEST + 1 ))
 
-bash option.sh -apple
+bash option.sh -au -R
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
 TEST=$(( TEST + 1 ))
 
-bash option.sh ---
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
 
 
 
