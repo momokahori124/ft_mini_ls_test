@@ -1,5 +1,6 @@
 cd ../
 make re > /dev/null
+sleep 5
 cd ../
 # あとであなたのパソコンのディレクトリを間違って消さないように変な名前のディレクトリにしています
 mkdir test_minishell_momoka

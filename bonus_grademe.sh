@@ -3,10 +3,14 @@ echo "test starting....❤️"
 echo ""
 
 cd ../
+echo "make re...."
 make re > /dev/null
 mkdir tmp
 mkdir tmp/dir1 tmp/dir2 tmp/dir3
+sleep 1
 touch tmp/file1 tmp/file2 tmp/dir1/file3
+sleep 1
+touch tmp/dir1/file4 tmp/dir1/file5
 
 cd ../
 # あとであなたのパソコンのディレクトリを間違って消さないように変な名前のディレクトリにしています
@@ -14,7 +18,7 @@ mkdir test_minishell_momoka
 
 cd ft_mini_ls/ft_mini_ls_test
 
-sleep 3
+sleep 1
 
 echo -e "\033[35m----------------------------\033[m"
 echo -e "       \033[35mSingle　option\033[m"
@@ -102,12 +106,6 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-# bash option.sh -aG
-# if test $? -eq 1; then
-#     COUNT=$(( COUNT + 1 ))
-# fi
-# TEST=$(( TEST + 1 ))
-
 bash option.sh -aR
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
@@ -132,12 +130,6 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-# bash option.sh -sG
-# if test $? -eq 1; then
-#     COUNT=$(( COUNT + 1 ))
-# fi
-# TEST=$(( TEST + 1 ))
-
 bash option.sh -uR
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
@@ -156,12 +148,6 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-# bash option.sh -UG
-# if test $? -eq 1; then
-#     COUNT=$(( COUNT + 1 ))
-# fi
-# TEST=$(( TEST + 1 ))
-
 bash option.sh -UR
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
@@ -174,23 +160,11 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-# bash option.sh -sG
-# if test $? -eq 1; then
-#     COUNT=$(( COUNT + 1 ))
-# fi
-# TEST=$(( TEST + 1 ))
-
 bash option.sh -sR
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
 TEST=$(( TEST + 1 ))
-
-# bash option.sh -SG
-# if test $? -eq 1; then
-#     COUNT=$(( COUNT + 1 ))
-# fi
-# TEST=$(( TEST + 1 ))
 
 bash option.sh -SR
 if test $? -eq 1; then
@@ -198,11 +172,66 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-# bash option.sh -GR
-# if test $? -eq 1; then
-#     COUNT=$(( COUNT + 1 ))
-# fi
-# TEST=$(( TEST + 1 ))
+bash option.sh -Uau
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -uaU
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -uUa
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -saS
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -Ssa
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -SsaR
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -SRU
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -sRu
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -aRus
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -SRsUu
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
 
 echo ""
 echo -e "\033[35m----------------------------\033[m"
