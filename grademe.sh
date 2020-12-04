@@ -1,13 +1,17 @@
 echo ""
-echo "test starting....❤️"
+echo -e "\033[35mtest starting....❤️\033[m"
 echo ""
 
 cd ../
-echo "make fclean && make bonus...."
+echo "make bonus...."
+echo "please wait for seconds...."
 make fclean > /dev/null
 make bonus > /dev/null
+echo ""
 
-echo "making directorys for review..."
+sleep 3
+
+echo "making many directorys for review..."
 rm -rf tmp
 mkdir tmp
 mkdir tmp/dir1 tmp/dir2 tmp/dir3
@@ -15,6 +19,21 @@ sleep 1
 touch tmp/file1 tmp/file2 tmp/dir1/file3
 sleep 1
 touch tmp/dir1/file4 tmp/dir1/file5
+echo ""
+
+echo "making files at the same time...."
+echo "      file_1, file_2, file_3, file_4, file_5"
+
+rm -f file file_{1,2,3,4,5}
+touch file
+cp -a file file_1
+cp -a file file_2
+cp -a file file_3
+cp -a file file_4
+cp -a file file_5
+
+sleep 1
+echo ""
 
 echo "making directory for diff..."
 
@@ -283,6 +302,7 @@ echo "You want to check result, try \"bash result.sh [option]\" "
 echo ""
 
 cd ../
+rm -f file file_{1,2,3,4,5}
 rm -rf tmp
 cd ../
 rm -rf test_minishell_momoka
