@@ -18,12 +18,16 @@ touch tmp/dir1/file4 tmp/dir1/file5
 
 echo "making directory for diff..."
 
+# current directory
+
+CDIR=${PWD##*/}
+
 cd ../
 # あとであなたのパソコンのディレクトリを間違って消さないように変な名前のディレクトリにしています
 rm -rf test_minishell_momoka
 mkdir test_minishell_momoka
 
-cd ft_mini_ls/ft_mini_ls_test
+cd ${CDIR}/ft_mini_ls_test
 echo ""
 
 sleep 1
