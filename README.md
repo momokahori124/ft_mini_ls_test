@@ -6,10 +6,11 @@ Note that this is a **"bonus"** tester !!!
 
 # usage
 
-ディレクトリ名がft_mini_lsじゃないとできないようになってます、今から修正します！お待ちください。
+Go to the directory where the Makefile is.
 
 ```
-$ cd ft_mini_ls　
+$ pwd
+Makefile ... ... ...　
 ```
 ```
 $ git clone https://github.com/momokahori124/ft_mini_ls_test.git && cd ft_mini_ls_test && bash grademe.sh
