@@ -10,7 +10,7 @@ Note that this is a **"bonus"** tester !!!
 $ cd ft_mini_ls
 ```
 ```
-$ git clone https://github.com/momokahori124/ft_mini_ls_test.git && cd ft_mini_ls_test && grademe.sh
+$ git clone https://github.com/momokahori124/ft_mini_ls_test.git && cd ft_mini_ls_test && bash grademe.sh
 ```
 
 <img width="452" alt="スクリーンショット 2020-12-04 2 37 52" src="https://user-images.githubusercontent.com/60100351/101066546-e6b92200-35d9-11eb-99ab-5e174c864174.png">
