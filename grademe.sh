@@ -2,7 +2,10 @@ echo ""
 echo -e "\033[35mtest starting....❤️\033[m"
 echo ""
 
+read -p "You want to try option \"a\" ? y/n : " option_a
+
 cd ../
+echo ""
 echo "make bonus...."
 echo "please wait for seconds...."
 make fclean > /dev/null
@@ -227,104 +230,105 @@ if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
 TEST=$(( TEST + 1 ))
-
-
-echo ""
-echo -e "\033[35m----------------------------\033[m"
-echo -e "       \033[35madd a　option\033[m"
-echo -e "\033[35m----------------------------\033[m"
 echo ""
 
-bash option.sh -uaU
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+if [[ $option_a == "y" ]]; then
 
-bash option.sh -uUa
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    echo -e "\033[35m----------------------------\033[m"
+    echo -e "       \033[35madd a option\033[m"
+    echo -e "\033[35m----------------------------\033[m"
+    echo ""
 
-bash option.sh -saS
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -uaU
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -Ssa
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -uUa
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -SsaR
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -saS
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -aRus
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -Ssa
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -au
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -SsaR
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -aU
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -aRus
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -as
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -au
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -aS
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -aU
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -aR
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -as
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -a -R
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -aS
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -au -R
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -aR
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -au -U
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -a -R
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
-bash option.sh -U -ua
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
+    bash option.sh -au -R
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
 
+    bash option.sh -au -U
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
+
+    bash option.sh -U -ua
+    if test $? -eq 1; then
+        COUNT=$(( COUNT + 1 ))
+    fi
+    TEST=$(( TEST + 1 ))
+fi
 
 echo ""
 echo "success : ${COUNT}/${TEST}"
