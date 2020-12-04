@@ -6,8 +6,10 @@ Note that this is a **"bonus"** tester !!!
 
 # usage
 
+ディレクトリ名がft_mini_lsじゃないとできないようになってます、今から修正します！お待ちください。
+
 ```
-$ cd ft_mini_ls
+$ cd ft_mini_ls　
 ```
 ```
 $ git clone https://github.com/momokahori124/ft_mini_ls_test.git && cd ft_mini_ls_test && bash grademe.sh
