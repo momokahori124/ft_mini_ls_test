@@ -1,7 +1,7 @@
 cd ../
 
-./ft_mini_ls $1 $2> ../test_minishell_momoka/test1
-ls -1rt $1 $2> ../test_minishell_momoka/test2
+./ft_mini_ls $1 $2 2>/dev/null > ../test_minishell_momoka/test1
+ls -1rt $1 $2 2>/dev/null > ../test_minishell_momoka/test2
 
 diff -y ../test_minishell_momoka/test1 ../test_minishell_momoka/test2 > "../test_minishell_momoka/result$1"
 
