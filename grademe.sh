@@ -3,6 +3,7 @@ echo -e "\033[35mtest starting....❤️\033[m"
 echo ""
 
 read -p "You want to try option \"a\" ? y/n : " option_a
+read -p "You want to try permission check? y/n : " per
 
 cd ../
 echo ""
@@ -21,11 +22,16 @@ mkdir tmp/dir1 tmp/dir2 tmp/dir3
 sleep 1
 touch tmp/file1 tmp/file2 tmp/dir1/file3
 sleep 1
-touch tmp/dir1/file4 tmp/dir1/file5
-# mkdir tmp/no_permission tmp/no_permission2
-# touch tmp/no_permission/file6
-# chmod 000 tmp/no_permission
-# chmod 000 tmp/no_permission2
+
+if [[ $per == "y" ]]; then
+    echo ""
+    echo "making no permission file ...."
+    touch tmp/dir1/file4 tmp/dir1/file5
+    mkdir tmp/no_permission tmp/no_permission2
+    touch tmp/no_permission/file6
+    chmod 000 tmp/no_permission
+    chmod 000 tmp/no_permission2
+fi
 echo ""
 
 echo "making files at the same time...."
@@ -347,8 +353,13 @@ echo ""
 echo "You want to check result, try \"bash result.sh [option]\" "
 echo ""
 
-rm -rf tmp
 cd ../
+
+chmod 777 tmp/no_permission
+chmod 777 tmp/no_permission2
+rm -rf tmp
 rm -f file file_{1,2,3,4,5}
 cd ../
+cd ../
+
 rm -rf test_minishell_momoka
