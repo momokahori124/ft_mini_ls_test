@@ -22,9 +22,10 @@ sleep 1
 touch tmp/file1 tmp/file2 tmp/dir1/file3
 sleep 1
 touch tmp/dir1/file4 tmp/dir1/file5
-# mkdir tmp/no_permission
+# mkdir tmp/no_permission tmp/no_permission2
 # touch tmp/no_permission/file6
 # chmod 000 tmp/no_permission
+# chmod 000 tmp/no_permission2
 echo ""
 
 echo "making files at the same time...."
@@ -346,8 +347,8 @@ echo ""
 echo "You want to check result, try \"bash result.sh [option]\" "
 echo ""
 
+rm -rf tmp
 cd ../
 rm -f file file_{1,2,3,4,5}
-rm -rf tmp
 cd ../
 rm -rf test_minishell_momoka
