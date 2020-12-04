@@ -22,9 +22,9 @@ sleep 1
 touch tmp/file1 tmp/file2 tmp/dir1/file3
 sleep 1
 touch tmp/dir1/file4 tmp/dir1/file5
-mkdir tmp/no_permission
-touch tmp/no_permission/file6
-chmod 000 tmp/no_permission
+# mkdir tmp/no_permission
+# touch tmp/no_permission/file6
+# chmod 000 tmp/no_permission
 echo ""
 
 echo "making files at the same time...."
