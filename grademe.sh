@@ -108,37 +108,13 @@ echo -e "       \033[35mMultiple　option\033[m"
 echo -e "\033[35m----------------------------\033[m"
 echo ""
 
-bash option.sh -au
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
-
-bash option.sh -aU
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
-
-bash option.sh -as
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
-
-bash option.sh -aS
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
-
-bash option.sh -aR
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
-
 bash option.sh -uU
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -Uu
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
@@ -204,6 +180,61 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
+bash option.sh -SRU
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -sRu
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -SRsUu
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -Uuuuuu -uuuU
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -Uuuuuu -uu
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -RuuuRu -uuU
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -ssRu
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -sSs
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+
+echo ""
+echo -e "\033[35m----------------------------\033[m"
+echo -e "       \033[35madd a　option\033[m"
+echo -e "\033[35m----------------------------\033[m"
+echo ""
+
 bash option.sh -uaU
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
@@ -234,25 +265,37 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-bash option.sh -SRU
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
-
-bash option.sh -sRu
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
-
 bash option.sh -aRus
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
 TEST=$(( TEST + 1 ))
 
-bash option.sh -SRsUu
+bash option.sh -au
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -aU
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -as
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -aS
+if test $? -eq 1; then
+    COUNT=$(( COUNT + 1 ))
+fi
+TEST=$(( TEST + 1 ))
+
+bash option.sh -aR
 if test $? -eq 1; then
     COUNT=$(( COUNT + 1 ))
 fi
@@ -282,17 +325,6 @@ if test $? -eq 1; then
 fi
 TEST=$(( TEST + 1 ))
 
-bash option.sh -Uuuuuu -uuuU
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
-
-bash option.sh -Uuuuuu -uu
-if test $? -eq 1; then
-    COUNT=$(( COUNT + 1 ))
-fi
-TEST=$(( TEST + 1 ))
 
 echo ""
 echo "success : ${COUNT}/${TEST}"
